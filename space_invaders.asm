@@ -34,8 +34,10 @@ static invaders_alive + #16, #0
 static invaders_alive + #17, #0
 
 spaceship_pos: var #1
+spaceship_clock: var #1
 
 static spaceship_pos, #1180
+static spaceship_clock, #0
 
 bullet_pos: var #1
 bullet_shoot: var #1
@@ -68,6 +70,14 @@ end_game:
 ; -----------------------------------            Acoes da nave            ----------------------------------- 	
 ; ----------------------------------- ----------------------------------- -----------------------------------
 spaceship_move:
+	loadn r0, #50
+	load r1, spaceship_clock
+	inc r1
+	store spaceship_clock, r1
+	cmp r1, r0
+	loadn r1, #0
+	store spaceship_clock, r1
+	
 	load r0, spaceship_pos
 	inchar r1
 	loadn r3, #40
