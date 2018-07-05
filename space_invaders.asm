@@ -70,13 +70,6 @@ end_game:
 ; -----------------------------------            Acoes da nave            ----------------------------------- 	
 ; ----------------------------------- ----------------------------------- -----------------------------------
 spaceship_move:
-	loadn r0, #1500
-	load r1, spaceship_clock
-	inc r1
-	store spaceship_clock, r1
-	cmp r1, r0
-	loadn r1, #0
-	store spaceship_clock, r1
 	
 	load r0, spaceship_pos
 	inchar r1
@@ -95,6 +88,13 @@ spaceship_move:
 	rts
 	
 spaceship_right:
+	loadn r0, #3000
+	load r1, spaceship_clock
+	inc r1
+	store spaceship_clock, r1
+	cmp r1, r0
+	loadn r1, #0
+	store spaceship_clock, r1
 	loadn r3, #1
 	cmp r2, r3
 	jeq spaceship_shoot_return
@@ -104,6 +104,13 @@ spaceship_right:
 	rts
 	
 spaceship_left:
+	loadn r0, #3000
+	load r1, spaceship_clock
+	inc r1
+	store spaceship_clock, r1
+	cmp r1, r0
+	loadn r1, #0
+	store spaceship_clock, r1
 	loadn r3, #38
 	cmp r2, r3
 	jeq spaceship_shoot_return
@@ -113,6 +120,13 @@ spaceship_left:
 	rts
 	
 spaceship_shoot:
+	loadn r0, #3000
+	load r1, spaceship_clock
+	inc r1
+	store spaceship_clock, r1
+	cmp r1, r0
+	loadn r1, #0
+	store spaceship_clock, r1
 	load r0, bullet_shoot
 	loadn r1, #1
 	cmp r1, r0
