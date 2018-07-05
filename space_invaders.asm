@@ -79,7 +79,7 @@ spaceship_move:
 	loadn r1, #0
 	store spaceship_clock, r1
 	
-	loadn r0, #10
+	loadn r0, #1000
 	load r1, spaceship_clock2
 	inc r1
 	store spaceship_clock2, r1
@@ -141,7 +141,7 @@ spaceship_shoot_return:
 ; ----------------------------------- ----------------------------------- -----------------------------------
 spaceship_print:
 	load r0, spaceship_pos
-	loadn r1, #'B'
+	loadn r1, #5
 	loadn r2, #2304
 	add r1, r1, r2
 	
