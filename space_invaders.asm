@@ -132,7 +132,7 @@ spaceship_shoot_return:
 ; ----------------------------------- ----------------------------------- -----------------------------------
 spaceship_print:
 	load r0, spaceship_pos
-	loadn r1, #'A'
+	loadn r1, #'B'
 	loadn r2, #2304
 	add r1, r1, r2
 	
