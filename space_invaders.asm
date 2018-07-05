@@ -35,6 +35,7 @@ static invaders_alive + #17, #0
 
 spaceship_pos: var #1
 spaceship_clock: var #1
+spaceship_clock2: var #1
 
 static spaceship_pos, #1180
 static spaceship_clock, #0
@@ -77,6 +78,14 @@ spaceship_move:
 	cmp r1, r0
 	loadn r1, #0
 	store spaceship_clock, r1
+	
+	loadn r0, #10
+	load r1, spaceship_clock2
+	inc r1
+	store spaceship_clock2, r1
+	cmp r1, r0
+	loadn r1, #0
+	store spaceship_clock2, r1
 	
 	load r0, spaceship_pos
 	inchar r1
